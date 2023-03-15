@@ -5,13 +5,6 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ObjectInput {
-    @JsonProperty("customer_id_column")
-    public String customerIdColumn;
-    public ObjectInput withCustomerIdColumn(String customerIdColumn) {
-        this.customerIdColumn = customerIdColumn;
-        return this;
-    }
-    
     @JsonProperty("destination_id")
     public Long destinationId;
     public ObjectInput withDestinationId(Long destinationId) {
@@ -23,6 +16,13 @@ public class ObjectInput {
     public String displayName;
     public ObjectInput withDisplayName(String displayName) {
         this.displayName = displayName;
+        return this;
+    }
+    
+    @JsonProperty("end_customer_id_field")
+    public String endCustomerIdField;
+    public ObjectInput withEndCustomerIdField(String endCustomerIdField) {
+        this.endCustomerIdField = endCustomerIdField;
         return this;
     }
     

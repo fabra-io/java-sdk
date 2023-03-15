@@ -69,7 +69,7 @@ lib/src/main/java/fabra/io/javasdk/models/operations/CreateSync200ApplicationJSO
 lib/src/main/java/fabra/io/javasdk/models/operations/CreateSyncResponse.java
 lib/src/main/java/fabra/io/javasdk/models/operations/GetSyncs200ApplicationJSON.java
 lib/src/main/java/fabra/io/javasdk/models/operations/GetSyncsResponse.java
-lib/src/main/java/fabra/io/javasdk/models/shared/ColumnSchema.java
+lib/src/main/java/fabra/io/javasdk/models/shared/Field.java
 lib/src/main/java/fabra/io/javasdk/models/shared/FieldTypeEnum.java
 lib/src/main/java/fabra/io/javasdk/models/shared/Destination.java
 lib/src/main/java/fabra/io/javasdk/models/shared/Connection.java

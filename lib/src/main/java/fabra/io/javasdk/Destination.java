@@ -10,7 +10,6 @@ import java.nio.charset.StandardCharsets;
 
 public class Destination {
 	
-	
 	private HTTPClient _defaultClient;
 	private HTTPClient _securityClient;
 	private String _serverUrl;
@@ -38,7 +37,7 @@ public class Destination {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = fabra.io.javasdk.utils.Utils.serializeRequestBody(request);
+        SerializedBody serializedRequestBody = fabra.io.javasdk.utils.Utils.serializeRequestBody(request, "request", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -65,9 +64,7 @@ public class Destination {
                 res.createDestination200ApplicationJSONObject = out;
             }
         }
-        else if (httpRes.statusCode() == 401) {
-        }
-        else if (httpRes.statusCode() == 500) {
+        else if (httpRes.statusCode() == 401 || httpRes.statusCode() == 500) {
         }
 
         return res;
@@ -106,9 +103,7 @@ public class Destination {
                 res.getDestinations200ApplicationJSONObject = out;
             }
         }
-        else if (httpRes.statusCode() == 401) {
-        }
-        else if (httpRes.statusCode() == 500) {
+        else if (httpRes.statusCode() == 401 || httpRes.statusCode() == 500) {
         }
 
         return res;

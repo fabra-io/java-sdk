@@ -10,8 +10,6 @@ import org.apache.http.NameValuePair;
 
 public class Connection {
 	
-	
-	
 	private HTTPClient _defaultClient;
 	private HTTPClient _securityClient;
 	private String _serverUrl;
@@ -40,7 +38,7 @@ public class Connection {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = fabra.io.javasdk.utils.Utils.getQueryParams(request.queryParams);
+        java.util.List<NameValuePair> queryParams = fabra.io.javasdk.utils.Utils.getQueryParams(fabra.io.javasdk.models.operations.GetNamespacesQueryParams.class, request.queryParams, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -67,9 +65,7 @@ public class Connection {
                 res.getNamespaces200ApplicationJSONObject = out;
             }
         }
-        else if (httpRes.statusCode() == 401) {
-        }
-        else if (httpRes.statusCode() == 500) {
+        else if (httpRes.statusCode() == 401 || httpRes.statusCode() == 500) {
         }
 
         return res;
@@ -87,7 +83,7 @@ public class Connection {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = fabra.io.javasdk.utils.Utils.getQueryParams(request.queryParams);
+        java.util.List<NameValuePair> queryParams = fabra.io.javasdk.utils.Utils.getQueryParams(fabra.io.javasdk.models.operations.GetSchemaQueryParams.class, request.queryParams, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -114,9 +110,7 @@ public class Connection {
                 res.getSchema200ApplicationJSONObject = out;
             }
         }
-        else if (httpRes.statusCode() == 401) {
-        }
-        else if (httpRes.statusCode() == 500) {
+        else if (httpRes.statusCode() == 401 || httpRes.statusCode() == 500) {
         }
 
         return res;
@@ -134,7 +128,7 @@ public class Connection {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = fabra.io.javasdk.utils.Utils.getQueryParams(request.queryParams);
+        java.util.List<NameValuePair> queryParams = fabra.io.javasdk.utils.Utils.getQueryParams(fabra.io.javasdk.models.operations.GetTablesQueryParams.class, request.queryParams, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -161,9 +155,7 @@ public class Connection {
                 res.getTables200ApplicationJSONObject = out;
             }
         }
-        else if (httpRes.statusCode() == 401) {
-        }
-        else if (httpRes.statusCode() == 500) {
+        else if (httpRes.statusCode() == 401 || httpRes.statusCode() == 500) {
         }
 
         return res;

@@ -4,11 +4,11 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class ColumnSchema {
+public class Field {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
-    public ColumnSchema withName(String name) {
+    public Field withName(String name) {
         this.name = name;
         return this;
     }
@@ -16,7 +16,7 @@ public class ColumnSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public FieldTypeEnum type;
-    public ColumnSchema withType(FieldTypeEnum type) {
+    public Field withType(FieldTypeEnum type) {
         this.type = type;
         return this;
     }

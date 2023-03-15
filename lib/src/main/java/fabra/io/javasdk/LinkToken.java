@@ -37,7 +37,7 @@ public class LinkToken {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = fabra.io.javasdk.utils.Utils.serializeRequestBody(request);
+        SerializedBody serializedRequestBody = fabra.io.javasdk.utils.Utils.serializeRequestBody(request, "request", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -64,9 +64,7 @@ public class LinkToken {
                 res.createLinkTokenResponse = out;
             }
         }
-        else if (httpRes.statusCode() == 401) {
-        }
-        else if (httpRes.statusCode() == 500) {
+        else if (httpRes.statusCode() == 401 || httpRes.statusCode() == 500) {
         }
 
         return res;

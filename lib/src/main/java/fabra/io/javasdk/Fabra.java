@@ -21,9 +21,8 @@ public class Fabra {
 	private fabra.io.javasdk.models.shared.Security _security;
 	private String _serverUrl;
 	private String _language = "java";
-	private String _sdkVersion = "0.3.0";
-	private String _genVersion = "1.8.5";
-
+	private String _sdkVersion = "0.5.0";
+	private String _genVersion = "1.11.0";
 	public static class Builder {
 		private HTTPClient client;
 		private fabra.io.javasdk.models.shared.Security security;
@@ -86,6 +85,7 @@ public class Fabra {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+		
 		
 		this.connection = new Connection(
 			this._defaultClient,

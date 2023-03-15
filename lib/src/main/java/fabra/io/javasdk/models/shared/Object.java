@@ -6,14 +6,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Object {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("customer_id_column")
-    public String customerIdColumn;
-    public Object withCustomerIdColumn(String customerIdColumn) {
-        this.customerIdColumn = customerIdColumn;
-        return this;
-    }
-    
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination_id")
     public Long destinationId;
     public Object withDestinationId(Long destinationId) {
@@ -26,6 +18,14 @@ public class Object {
     public String displayName;
     public Object withDisplayName(String displayName) {
         this.displayName = displayName;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("end_customer_id_field")
+    public String endCustomerIdField;
+    public Object withEndCustomerIdField(String endCustomerIdField) {
+        this.endCustomerIdField = endCustomerIdField;
         return this;
     }
     

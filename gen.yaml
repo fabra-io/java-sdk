@@ -1,14 +1,14 @@
 configVersion: 1.0.0
 management:
-  docChecksum: 8b6e699ac2ed042ca62a8341762bfe53
+  docChecksum: c18b0156a739c7d3242d3807c2e99e82
   docVersion: 0.1.0
-  speakeasyVersion: 1.8.5
+  speakeasyVersion: 1.11.0
 generation:
   telemetryEnabled: false
   sdkClassName: Fabra
   sdkFlattening: false
 java:
-  version: 0.3.0
+  version: 0.5.0
   artifactID: javasdk
   groupID: fabra.io
   projectName: fabra-java-sdk
